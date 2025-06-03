@@ -1,14 +1,18 @@
+/* style.css */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  header {
+  header, footer {
     background-color: #222;
     color: white;
     padding: 1rem;
+    transition: background-color 0.3s ease;
   }
   
   nav {
@@ -16,17 +20,20 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
   }
   
   nav h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
   }
   
   .menu {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
     margin: 0;
     padding: 0;
   }
@@ -34,6 +41,8 @@ body {
   .menu a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.3s ease;
   }
   
   .menu a:hover {
@@ -44,23 +53,42 @@ body {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 800px;
+    gap: 2rem;
+    max-width: 900px;
     margin: auto;
+    line-height: 1.6;
   }
   
   h2, h3 {
     color: #222;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
   }
   
   footer {
-    background-color: #222;
-    color: white;
     text-align: center;
-    padding: 1rem;
     margin-top: 2rem;
+    transition: background-color 0.3s ease;
   }
   
+  .projeto-img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projeto-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  section.projeto p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Dark mode */
   body.dark {
     background-color: #1a1a1a;
     color: #eee;
@@ -86,4 +114,13 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-  }  
+    z-index: 100;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  #toggle-dark-mode:hover {
+    background: #555;
+    transform: scale(1.05);
+  }
