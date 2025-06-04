@@ -4,7 +4,7 @@ Este é o meu portfólio pessoal, desenvolvido com HTML, CSS e JavaScript. Ele a
 
 ## Acesse o site
 
-[Link para o portfólio]((https://natan-tavares.github.io/Portifolio/))
+[Link para o portfólio](https://natan-tavares.github.io/Portifolio/)
 
 
 ## Tecnologias utilizadas
