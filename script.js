@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const isDark = localStorage.getItem("theme") === "dark";
   
@@ -8,11 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("theme", darkMode ? "dark" : "light");
       toggleBtn.textContent = darkMode ? "Modo Claro" : "Modo Escuro";
     };
-  
-    // Criação do botão de alternância
+
     const toggleBtn = document.createElement("button");
     toggleBtn.id = "toggle-dark-mode";
-    toggleBtn.style.display = "none"; // Evita piscadas se for adicionado antes da lógica
+    toggleBtn.style.display = "none"; 
     document.body.appendChild(toggleBtn);
   
     applyTheme(isDark);
@@ -23,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       applyTheme(darkMode);
     });
   
-    // Destacar o item do menu correspondente à página atual
     const currentPath = window.location.pathname.split("/").pop();
     document.querySelectorAll(".menu a").forEach(link => {
       const linkPath = link.getAttribute("href");
