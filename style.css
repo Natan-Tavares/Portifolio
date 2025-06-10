@@ -58,7 +58,6 @@
   .menu a:hover,
   .menu a.ativo {
     color: var(--accent);
-    text-decoration: underline;
   }
   
   main.conteudo, main.intro {
